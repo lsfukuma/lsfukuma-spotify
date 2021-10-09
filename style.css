@@ -1,0 +1,405 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ----inizio asidebar------- */
+#aside-bar {
+    height: calc(100vh - 100px);
+    width: 200px;
+    background-color: black;
+    float: left;
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: lighter;
+    position: relative;
+}
+
+#logo img, #logo-xs {
+    padding-top: 20px;
+    height: auto;
+    object-fit: contain;
+    text-align: center;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    cursor: pointer;
+}
+
+#logo img {
+    width: 150px;
+}
+
+#logo-xs {
+    width: 60px;
+    padding-left: 15px;
+}
+
+.icon {
+    padding: 7px 0 7px 15px;
+}
+
+.icon:nth-of-type(2) {
+    color: #fff;
+    border-left: 3px solid #1AB26B;
+    padding-left: 12px;
+}
+
+.icon p{
+    display:inline-block;
+    padding-left: 5px;
+    cursor: pointer;
+    padding-top: 5px;
+}
+
+#aside-bar h5 {
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.last-played {
+    padding: 10px 0 15px 15px;
+    cursor: pointer;
+}
+
+.last-played p {
+    padding-top: 5px;
+}
+
+#menu-bottom {
+    padding-left: 25px;
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    cursor: pointer;
+}
+
+#install p , #account p {
+    display: inline-block;
+    padding-left: 15px;
+    padding-top: 15px;
+}
+
+#install {
+    padding-bottom: 8px;
+    width: 130px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+#account p {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: bold;
+}
+
+/* IDEA: main */
+main {
+    height: calc(100vh - 100px);
+    width: calc(100% - 200px);
+    float: left;
+    color: rgba(255, 255, 255, 0.7);
+    padding-left: 20px;
+    background-color: #000000;
+    background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
+    overflow-y: auto;
+}
+
+#nav ul {
+    text-align: center;
+    padding-top: 15px;
+}
+
+#nav li {
+    display:inline-block;
+    padding: 10px;
+    text-transform: uppercase;
+    position: relative;
+    letter-spacing: 0.5px;
+}
+
+#nav a {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+#nav li a:hover {
+    color: #fff;
+}
+
+#nav li a:hover::after{
+    content: "";
+    position: absolute;
+    left: 25%;
+    bottom: 0;
+    width: 50%;
+    height: 2px;
+    background-color: #1AB26B;
+}
+
+#navbar-mobile {
+    font-size: 30px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+#navbar-mobile i:hover {
+    color: #1AB26B;
+}
+
+.title-main {
+    width: 98%;
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    margin-top: 30px;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+}
+
+.brani img {
+    max-height: 200px;
+    max-width: 200px;
+    margin-top: 15px;
+    object-fit: contain;
+}
+
+.brani {
+    position: relative;
+    cursor: pointer;
+    max-height: 200px;
+    max-width: 200px;
+    margin-bottom: 70px
+}
+
+.brani::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    margin-top: 15px;
+    background-color: rgba(0, 0, 0, 0.8);
+    visibility: hidden;
+}
+
+.brani::after {
+    content: '\f04b';
+    font-family: "FontAwesome";
+    font-weight: bold;
+    font-size: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:  translate(-50%, -50%);
+    visibility: hidden;
+}
+
+.brani:hover::before , .brani:hover::after {
+    visibility: visible;
+}
+
+.brani p, small {
+    padding-top: 10px;
+    text-align: left;
+}
+
+#perte , #suggerimenti, #madeforyou {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* -------PLAYER------- */
+footer {
+    height: 100px;
+    width: 100%;
+    background: #181818;
+    color: rgba(255, 255, 255, 0.6);
+    display: flex;
+    justify-content: space-between;
+}
+
+#tape {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+}
+
+#tape p {
+    padding-left: 10px;
+}
+
+#tape p:first-of-type {
+    color: white;
+    font-size: 15px;
+}
+
+#tape p:last-of-type {
+    font-weight: lighter;
+    font-size: 13px;
+}
+
+.fa-heart{
+    padding-left: 20px;
+    padding-top: 5px;
+    color: pink;
+}
+
+#tape img {
+    height: 60px;
+    width: 60px;
+    object-fit: contain;
+}
+
+#player {
+    width: 80%;
+    height: 100%;
+}
+
+#player-top {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#player-top i {
+    font-size: 25px;
+    padding: 20px;
+}
+
+.fa-pause-circle {
+    color: white;
+}
+
+#ranger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#ranger span {
+    font-size: 12px;
+    font-weight: lighter;
+    padding: 0 5px 0 5px;
+}
+
+.slider:hover {
+    background-color: #1AB26B;
+}
+
+.slider{
+    -webkit-appearance: none;
+    height: 3px;
+    background:rgba(255, 255, 255, 0.6);
+    outline: none;
+    border-radius: 12px;
+}
+
+#slider-player {
+    width: 60%;
+}
+
+.slider::-moz-range-thumb { /* per firefox*/
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    background: white;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.slider::webkit-slider-thumb { /* per chrome */
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    background: white;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+#volume, #volume-range {
+    width: 10%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#volume i {
+    padding: 10px;
+    font-size: 15px;
+}
+
+
+/* ---media query----- */
+
+
+@media screen and (max-width: 767px){
+    .hidden-xs {
+        display: none;
+    }
+    .show-xs {
+        display: block;
+    }
+    #aside-bar {
+        width: 100px;
+    }
+    #aside-bar p, #aside-bar h5 {
+        display: none;
+    }
+    #install {
+        border-bottom: 0;
+    }
+    .icon {
+        padding-left: 30px;
+    }
+    .icon:nth-of-type(2) {
+        padding-left: 27px;
+    }
+    #nav {
+        display: none;
+    }
+    main {
+        width: calc(100% - 100px);
+    }
+    #player-top  {
+        padding-left: 20px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px){
+    .hidden-md {
+        display: none;
+    }
+    .show-md {
+        display: block;
+    }
+    #nav {
+        display: none;
+    }
+    #player-ranger {
+        width: 100%;
+    }
+    #volume i{
+        padding: 5px;
+        font-size: 10px;
+    }
+}
+
+@media screen and (min-width: 992px){
+    .hidden-lg {
+        display: none;
+    }
+    .show-lg {
+        display: block;
+    }
+}
